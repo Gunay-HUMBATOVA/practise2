@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: linear-gradient(to left, #5a2b57, white);
+    background-image: linear-gradient(to left, #5a2b57, #ffffff);
 }
 
 div.all {
@@ -17,37 +17,39 @@ div.all {
 
 /* Style the top navigation bar */
 
-.nav {
+.navigation {
     background-color: #333;
     max-height: 50px;
     display: block;
 }
 
-/* Style the topnav links */
-.nav a {
+/* Style the topnavigation links */
+.navigation a {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 6px;
+    padding: 14px;
     text-decoration: none;
 }
 
-.nav a, .logo, .dropbtn, input, button {
+.home {
+    margin-left: 1%;
+}
+
+.navigation a, .logo, .drop-button, input, button {
     font-size: 2.2vmin;
 }
 
 /* Change color on hover */
-.nav a:hover {
+.navigation a:hover {
     background-color: #000;
 }
-
 
 .logo {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 10px 10px;
-    padding-right: 6vmin;
+    padding: 10px 2%;
 }
 
 .logo img {
@@ -62,33 +64,29 @@ div.all {
     position: absolute;
 }
 
-li {
-    list-style: none;
-}
-
-.dropdown {
+.dropdown-menu {
     float: left;
     overflow: hidden;
 }
 
-.dropdown .dropbtn {
+.dropdown-menu .drop-button {
     border: none;
     outline: none;
-    color: white;
+    color: #ffffff;
     padding: 14px 8px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
 }
 
-.dropbtn::after {
+.drop-button::after {
     content: '\25bc';
     color: #946491;
-    padding: 2.8px;
+    padding: 3px;
     font-size: 1.7vmin;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown-menu:hover .drop-button {
     background-color: rgb(77, 73, 73);
 }
 
@@ -97,13 +95,13 @@ li {
     position: absolute;
     background-color: #333;
     min-width: 8rem;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
 .dropdown-content a {
     float: none;
-    color: white;
+    color: #fff;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -112,14 +110,14 @@ li {
 
 .dropdown-content a:hover {
     background-color: rgb(77, 73, 73);
-    color: white;
+    color: #fff;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-menu:hover .dropdown-content {
     display: block;
 }
 
-form.myform input[type=text] {
+form.my_form input[type=text] {
     padding: 5px;
     height: 2%;
     border: 1px solid grey;
@@ -130,7 +128,7 @@ form.myform input[type=text] {
     border-radius: 3px;
 }
 
-form.myform button {
+form.my_form button {
     margin: 8px 3px 0;
     height: 1%;
     float: right;
@@ -143,65 +141,64 @@ form.myform button {
     border-radius: 3px;
 }
 
-form.myform button:hover {
+form.my_form button:hover {
     background: #4b2c55;
 }
 
-form.myform::after {
+form.my_form::after {
     content: "";
     clear: both;
     display: table;
 }
 
 /* Header/Blog Title */
-.headerbackground {
-    background: url(../img/w.jpg) repeat;
-    border: 2px solid black;
+.header-background {
+    background: url(../images/cover-photo.jpg) repeat;
+    border: 2px solid #000000;
 }
 
-.transbox {
+.white-box {
     margin: 30px;
     background-color: #ffffff;
-    border: 1px solid black;
+    border: 1px solid #000000;
     opacity: 0.6;
     font-weight: bolder;
 }
 
-.transbox p {
-    margin: 2%;
+p.p-style {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.white-box p {
     font-weight: bold;
     color: #000000;
     font-size: 3vmin;
-    margin-left: 1%;
-    margin-top: 3px;
-    margin-bottom: 2px;
+    margin: 3px 2%;
 }
 
-.transbox h1 {
+.white-box h1 {
     margin: 18px 0;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.637);
     font-size: 28px;
 }
 
-.dramaicon h1 {
+.dramatically-icon h1 {
     display: inline-flex;
     position: absolute;
     font-size: 6.7vmin;
 }
 
-.icon1 {
+.logo-2-tetris-icon {
     max-width: 12%;
     max-height: 12%;
-    margin: 10px;
-    margin-right: 0;
+    margin: 10px 0;
 }
 
 .button {
     display: inline-block;
     border-radius: 4px;
     background-color: #01adc4;
-    border: none;
     color: #FFFFFF;
     font-size: 3vmin;
     text-align: center;
@@ -212,6 +209,7 @@ form.myform::after {
     cursor: pointer;
     margin: 5px;
     border: 1px solid black;
+    vertical-align:middle;
 }
 
 .button span {
@@ -249,8 +247,7 @@ form.myform::after {
 
 .container h1::after {
     content: "Visualize Quality";
-    padding: 7px;
-    padding-left: 15px;
+    padding: 7px 15px;
     font-size: 3vmin;
     color: rgb(104, 98, 98);
 }
@@ -277,14 +274,14 @@ form.myform::after {
     padding: 5px;
 }
 
-.colimg img {
+.column-image img {
     border: black;
     width: 100%;
     border-radius: 17px;
     padding: 10px;
 }
 
-.photodesign {
+.photo_design {
     padding-left: 10px;
     font-size: 4vmin;
     color: #310d44;
